@@ -1,0 +1,41 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage{hyperref}
+
+% Title Page
+\title{
+Installing and running scikit-learn
+}
+\author{Peter-Tibor Zavaczki}
+\date{march 7, 2018}
+
+\begin{document}
+\maketitle
+
+ 
+\chapter{Scikit-learn}
+ \section{Tool Purpose}
+ %State here in one paragraph, in Natural Language (plain English), what kind of problem your system can solve.
+ Scikit-learn is a machine learning library for Python, which features various classification, regression and clustering algorithms, and is designed to interoperate with the Python numerical and scientific libraries NumPy and SciPy.
+ 
+ \section{Installing scikit-learn}
+ Prior to using scikit-learn, Python ($>$= 2.7 or $>$= 3.3) has to be installed along with the NumPy ($>$= 1.8.2) and SciPy ($>$= 0.13.3) libraries.
+  \subsection{Installing steps}
+ Some versions of Ubuntu come installed with Python 2.7.12 and Python 3.5.2, so for this installation we will consider that and install scikit-learn for Python 3.5.2.
+ To ease installing packages for Python we will use pip. To install pip, we need the command \textit{sudo apt install python3-pip}. Please note that we have a 3 after python to signal that we will install pip for Python 3.x.
+ After the previous step we install NumPy and SciPy by using the command \textit{sudo pip3 install numpy scipy}. This will download the libraries' latest version and automatically install them.
+ As a final step, we use the command \textit{sudo pip3 install scikit-learn} to install scikit-learn.
+
+
+ \section{Studied example}
+ %Describe in one paragraph the example you have studied. Then detail the implementation in the next subsections.
+ The studied example is \textbf{Recognizing hand-written digits} by \textbf{Gael Varoquaux}, a handwritten digit classificator by machine learning. It can recognize the 0-9 handwritten digits and convert them to digital characters.
+ 
+ \subsection{How to run the example(s)}
+ %Give step-by-step instructions on how to run the example(s) you have studied.   
+ %steps for running the example.
+ To run the given example, you need to have matplotlib, installed with \textit{sudo pip3 install matplotlib} and python3-tk, installed with \textit{sudo apt-get install python3-tk}. Then just use the command $python3\ ./plot\_digits\_classification.py$ from the folder of origin to run the example.
+ 
+  \subsection{Algorithm}
+ The given example relies on a few libraries which it imports and works with. These are matplotlib.pyplot, and from sklearn, the datasets, svm, metrics libraries. After the libraries have been loaded, the application loads the processed dataset using the datasets.load_digits() command.
+
+\end{document}

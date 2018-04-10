@@ -101,4 +101,8 @@ ENV/
 .mypy_cache/
 
 # to do list
-.todo
+*.todo
+
+# dataset archives
+*.zip
+*.rar

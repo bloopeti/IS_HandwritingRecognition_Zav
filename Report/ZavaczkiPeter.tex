@@ -37,12 +37,18 @@ Handwritten symbol recognition using Scikit-learn
  To run the given example, you need to have matplotlib, installed with \textit{sudo pip3 install matplotlib} and python3-tk, installed with \textit{sudo apt-get install python3-tk}. Then just use the command $python3\ ./plot\_digits\_classification.py$ from the folder of origin to run the example.
  
  \subsection{Algorithm}
- The given example relies on a few libraries which it imports and works with. These are matplotlib.pyplot, and from sklearn, the datasets, svm, metrics libraries. After the libraries have been loaded, the application loads the processed dataset using the datasets.load_digits() command. 
- The images and the targets of the digits dataset is zipped into touples and added to a lists, so that it can be worked with in the following nested for-each loop (first level iterating by index, second level iterating by (image, prediction) touple). Please note that the loop only takes the first 4 (image, target) touples! In the mentioned for loop, at each iteration a new subplot is activated, the axis' are turned off (we are displaying an image and labelling it to see what it is, we are not actually displaying an actual plot), an image is shown on the axis with the gray_r colormap set and the interpolation set to nearest (this is the best choice when a small image is enlarged), then a title is set for each sepparate subplot, which signals the character trained using that data sample.
- In the following step the number of image samples is saved in the n_samples variable. In the data variable a reshaped version of the digits' images' array is stored in the (samples, feature) matrix format. A Support Vector Classifier is instantiated with a gamma of value 0.001 and then the first half of the dataset is used for training.
+ The given example relies on a few libraries which it imports and works with. These are matplotlib.pyplot, and from sklearn, the datasets, svm, metrics libraries. After the libraries have been loaded, the application loads the processed dataset using the datasets.load\_digits() command. 
+ 
+ The images and the targets of the digits dataset is zipped into touples and added to a lists, so that it can be worked with in the following nested for-each loop (first level iterating by index, second level iterating by (image, prediction) touple). Please note that the loop only takes the first 4 (image, target) touples! In the mentioned for loop, at each iteration a new subplot is activated, the axis' are turned off (we are displaying an image and labelling it to see what it is, we are not actually displaying an actual plot), an image is shown on the axis with the gray\_r colormap set and the interpolation set to nearest (this is the best choice when a small image is enlarged), then a title is set for each sepparate subplot, which signals the character trained using that data sample.
+ 
+ In the following step the number of image samples is saved in the n\_samples variable. In the data variable a reshaped version of the digits' images' array is stored in the (samples, feature) matrix format. A Support Vector Classifier is instantiated with a gamma of value 0.001 and then the first half of the dataset is used for training.
+ 
  After training with the first half of the dataset, the second half's targets are stored in the 'expected' variable and the predictions from the second half of the dataset are stored in the 'predicted' variable.
- TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO  TODO 
+ 
+ After predicting the second half of the dataset, we print the SVC's prameters, which in this case is all default, except for gamma and the classification report, which consists of listing the possible cases and the precision, recall and f1-scores calculated for them, along the number of samples of that case in the predicted dataset. The second part of printing the prediction data is the confusion matrix, which represents the expected values on the rows and the predicted values on the columns.
+ 
  In the next step, the second half of the dataset and the predictions are zipped into a list of touples, so that the first four predicted images can be displayed similarly to the first four training images before.
+ 
  As a last step, the plot is shown so that we can see the results.
  
 \end{document}

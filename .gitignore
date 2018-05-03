@@ -107,3 +107,4 @@ ENV/
 *.zip
 *.rar
 /Dataset/Extended MNIST/emnist/*
+*.csv

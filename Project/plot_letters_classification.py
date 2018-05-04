@@ -4,7 +4,7 @@ Recognizing hand-written letters
 ================================
 
 An example showing how scikit-learn can be used to recognize images of
-hand-written digits.
+hand-written letters.
 
 """
 print(__doc__)
@@ -48,8 +48,12 @@ dataTrain = lettersTrainData.reshape((n_samplesTrain, -1))
 # Create a classifier: a support vector classifier
 classifier = svm.SVC(gamma=0.001)
 
+print("1")
+
 # We learn the digits on the first half of the digits
-classifier.fit(dataTrain[:n_samplesTrain // 2], lettersTrainTarget[:n_samplesTrain // 2])
+classifier.fit(dataTrain[:n_samplesTrain // 1], lettersTrainTarget[:n_samplesTrain // 1])
+
+print("2")
 
 # Now predict the value of the digit on the second half:
 lettersTestRaw = np.loadtxt(fname = "./emnist-letters-train.csv", delimiter = ',')
@@ -71,3 +75,4 @@ images_and_predictions = list(zip(lettersTestTarget, predicted))
 #    plt.title('Prediction: %i' % prediction)
 
 plt.show()
+

@@ -1,5 +1,11 @@
 \documentclass[a4paper,10pt]{report}
 \usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
 
 % Title Page
 \title{
@@ -50,5 +56,18 @@ Handwritten symbol recognition using Scikit-learn
  In the next step, the second half of the dataset and the predictions are zipped into a list of touples, so that the first four predicted images can be displayed similarly to the first four training images before.
  
  As a last step, the plot is shown so that we can see the results.
+ 
+ 
+\chapter{Proposed project}
+ The proposed project is a handwritten letter recognizer, working on the \href{https://www.kaggle.com/ashishguptajiit/handwritten-az/}{''EMINST handwritten letters dataset, from kaggle''}.
+ 
+ \section{The dataset's format}
+ The above mentioned dataset is split into two csv files, representing a training set of 171.610.185 bytes of data and a testing set of 28.625.756 bytes.
+ Each row of the csv has 785 columns, which represents an instance of data.
+ On the first column, the number represents the position of the letter in the english alphabet (1 for a, 26 for z).
+ The rest of the row's columns represent the values of a flattened 28x28 pixel grayscale image (784 values on a row, each representing a pixel), with values ranging from 0 to 255.
+ 
+ \section{The classifier}
+ TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO 
  
 \end{document}

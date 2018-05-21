@@ -100,9 +100,9 @@ Handwritten symbol recognition using Scikit-learn
 
  \subsection{The classifier}
  In this step we create a SVC (Support Vector Classifier) to which we will fit our training data and then predict the testing data.\\
- TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO\\
- TALK ABOUT THE CLASSIFIER\\
- TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO\\
+ In machine learning, support vector machines (SVMs, also support vector networks) are supervised learning models with associated learning algorithms that analyze data used for classification and regression analysis. Given a set of training examples, each marked as belonging to a category of a given set, an SVM training algorithm builds a model that assigns new examples to a category of the learned sets.\\
+ The support vector clustering algorithm created by Hava Siegelmann and Vladimir Vapnik, applies the statistics of support vectors, developed in the support vector machines algorithm, to categorize unlabeled data, and is one of the most widely used clustering algorithms in industrial applications.\\
+ In SciKit we have SVC as a subclass of svm. Svm represents support vector machine, and SVC is a Support Vector Classifier. SVC can be of 4 types based on its kernel function: linear, polynomial, rbf (radial basis function) or sigmoid. In our case a rbf based SVC is used, which means the equation it is based on is \((-\gamma \left \| x - {x}' \right \|^{2})\) with \(\gamma = 0.001\). \\
  \code{\# Create a classifier: a support vector classifier}\\
  \code{classifier = svm.SVC(gamma=0.001)}\\
  \code{\# We learn the letters in the training dataset}\\
